@@ -1,4 +1,5 @@
 # Messaging-app
+<<<<<<< HEAD
 
 Chat application using React and TalkJS.
 
@@ -70,3 +71,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+Chat application using React and TalkJS
+>>>>>>> 498f90fa4598e3ad149139c1bdbd5f4cb5b6366d
