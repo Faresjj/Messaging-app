@@ -2,9 +2,35 @@ import React, { Component } from 'react';
 import { dummyUsers } from "./Users";
 
 class MyNetwork extends Component {
+   constructor(props) {
+        super(props); 
+        let currentUser;
+        const currentTalkjsUser = localStorage.getItem('currentTalkjsUser');
+        if (currentTalkjsUser) {
+            currentUser = JSON.parse(currentTalkjsUser)
+        }
+        this.state = {
+            currentUser
+        }
+      }
+
     render() {
+      const { currentUser } = this.state;
         return (
             <div className="users">
+            <div className="current-user-container">
+                 {currentUser &&
+                     <div>
+                         <picture className="current-user-picture">
+                             <img alt={currentUser.name} src={currentUser.photoUrl} />
+                         </picture>
+                         <div className="current-user-info">
+                             <h3>{currentUser.name}</h3>
+                             <p>{currentUser.description}</p>
+                         </div>
+                     </div>
+                 }
+             </div>
                 <div className="users-container"> 
                     <ul>
                         { dummyUsers.map(user => 
